@@ -35,14 +35,12 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-
     this->checkExecutability(executor);
     
     std::cout << "* DRILLING NOISES * Bzzzzzt! Whirrrrr! Krrrrr!" << std::endl;
-
+    
     std::srand(static_cast<unsigned int>(std::time(NULL)));
     
-
     if (std::rand() % 2)
     {
         std::cout << _target << " has been robotomized successfully!" << std::endl;
